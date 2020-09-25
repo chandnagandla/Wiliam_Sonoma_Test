@@ -1,0 +1,35 @@
+<div class="container">
+	<header>
+		<h1>Product Details</h1>
+	</header>
+	<hr />
+  <br />
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4" *ngFor="let product of productList">
+			<div class="product" (click)="selectProduct(product)">
+
+				<picture>
+					<source media="(min-width:{{product.hero.width}}px)" srcset="{{product.hero.href}}">
+					<img src="{{product.hero.href}}">
+        </picture>
+				<div [innerHTML]="product.name" class="product__title"></div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div *ngIf="showModal">
+	<div class="custom-fade"></div>
+	<div class="custom-modal">
+		<button class="close-btn" (click)="closeModal()">X</button>
+		<ngb-carousel *ngIf="selectedProduct">
+			<ng-template ngbSlide *ngFor="let image of selectedProduct.images">
+				<picture>
+					<source media="(min-width:{{image.width}}px)" srcset="{{image.href}}">
+					<img src="{{image.href}}">
+      </picture>
+			</ng-template>
+		</ngb-carousel>
+	</div>
+</div>

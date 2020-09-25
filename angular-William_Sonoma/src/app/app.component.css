@@ -1,0 +1,53 @@
+.container {
+  font-family: Arial;
+  font-size: 16px;
+}
+
+header {
+  text-align: center;
+  padding:15px;
+}
+
+.product {
+  font-weight: bold;
+  padding:10px;
+  margin:5px;
+}
+
+.product__title {
+  position: absolute;
+  top: 0px;
+  padding: 22px 12px;
+  background: rgba(255,255,255,.5);
+  width: 100%;
+}
+
+.custom-modal {
+  width: auto;
+  height: auto;
+  position: fixed;
+  z-index: 9999;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+.custom-fade {
+    background: rgba(0,0,0,.5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 9999;
+  border-radius: 50%;
+  border: 0px;
+}
